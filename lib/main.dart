@@ -317,7 +317,7 @@ class _chatbotState extends State<home> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const ChatBot(),
+              builder: (context) =>  Chat(),
             ),
           );
         },
