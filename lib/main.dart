@@ -17,18 +17,17 @@ class chatbot extends StatefulWidget {
 
 class _chatbotState extends State<chatbot> {
   final List<String> imageList = [
-    'https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg',
-    'https://th.bing.com/th/id/OIP.VtyV1I7hrXKYkHVQUPkcfgHaEK?rs=1&pid=ImgDetMain',
-    'https://th.bing.com/th/id/R.9e0510fce40905a7ce9b1dde63e69032?rik=WGxTdyWR5zsZ7g&riu=http%3a%2f%2ffc00.deviantart.net%2ffs70%2fi%2f2011%2f147%2f9%2fa%2fnight_sky_by_vectorday-d3hc4p8.jpg&ehk=0FOSGYP9O%2fPHW0csbrEm6XjglBrqsLdNs6bCHUWct4k%3d&risl=&pid=ImgRaw&r=0',
-    'https://th.bing.com/th/id/R.68acc506789f5d343c1280f3bc92475d?rik=dZDbqULavRoElQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fMacbook-Pro-13-Inch-HD-Wallpaper.jpg&ehk=RvWoWqG58SLfhLVYgqbu9PMxYPBBS0WkRqeEmZYMPjc%3d&risl=&pid=ImgRaw&r=0',
-    'https://th.bing.com/th/id/OIP.dowJnnydaFIDDTdR_C8kiwHaEo?rs=1&pid=ImgDetMain',
-    'https://th.bing.com/th/id/OIP.oM5INDF08ka_cU7csjgSLgHaHa?rs=1&pid=ImgDetMain',
+    'https://www.hu.edu.eg/wp-content/uploads/2018/10/HU-113-1024x683.jpg',
+    'https://www.hu.edu.eg/wp-content/uploads/2021/09/IMG_9653-min-1024x683.jpg',
+    'https://www.hu.edu.eg/wp-content/uploads/2018/06/admission14-e1586056827220.jpg',
+    'https://www.hu.edu.eg/wp-content/uploads/2018/05/JobLand6-e1586056692386.jpg',
+    'https://www.hu.edu.eg/wp-content/uploads/2022/08/Banner-1536x488.jpg',
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chat-Bot'),
+        title: const Text('Heliopolis University'),
         centerTitle: true,
       ),
       body: ListView(
@@ -39,7 +38,7 @@ class _chatbotState extends State<chatbot> {
               options: CarouselOptions(
                 enlargeCenterPage: true,
                 enableInfiniteScroll: true,
-                autoPlay: true,
+                autoPlay: false,
               ),
               items: imageList
                   .map(
@@ -65,31 +64,168 @@ class _chatbotState extends State<chatbot> {
             height: 50,
           ),
           Card(
-            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            margin: const EdgeInsets.only(left: 20, right: 20),
             child: Image.network(
-              'https://th.bing.com/th?id=OIF.gqRXaSg%2bJHd0uJ17j0%2fVkQ&rs=1&pid=ImgDetMain',
+              'https://www.hu.edu.eg/wp-content/uploads/2019/08/engineering.jpg',
               fit: BoxFit.fill,
-              height: 150,
-              width: 150,
+              height: 170,
+              width: 120,
             ),
           ),
           const SizedBox(
             width: double.infinity,
-            height: 120,
+            height: 220,
             child: Card(
               child: Padding(
                 padding: EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'AI 4 Years',
+                      'Faculty of Engineering',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
                     ),
-                    SizedBox(width: 135,child: Divider(),),
+                    SizedBox(
+                      width: 130,
+                      child: Divider(),
+                    ),
+                    Text('Dr.Mohamed Taha'),
+                    SizedBox(
+                      width: 100,
+                      child: Divider(),
+                    ),
+                    Text(
+                      'The Faculty of Engineering is fostering responsibility for innovative technical implementation by addressing the burning issues related to the environment',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Card(
+            margin: const EdgeInsets.only(left: 20, right: 20),
+            child: Image.network(
+              'https://www.hu.edu.eg/wp-content/uploads/2021/12/business.jpg',
+              fit: BoxFit.fill,
+              height: 170,
+              width: 120,
+            ),
+          ),
+          const SizedBox(
+            width: double.infinity,
+            height: 220,
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Faculty of Business and Economics',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 130,
+                      child: Divider(),
+                    ),
                     Text('Dr.Ahmed Taha'),
+                    SizedBox(
+                      width: 100,
+                      child: Divider(),
+                    ),
+                    Text(
+                      'The Faculty of Business and Economics is at the forefront of innovative and alternative models applied in business and economics. We are committed to fostering a system that is simultaneously ethical, successful, and competitive',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Card(
+            margin: const EdgeInsets.only(left: 20, right: 20),
+            child: Image.network(
+              'https://www.hu.edu.eg/wp-content/uploads/2019/08/pharmacy.jpg',
+              fit: BoxFit.fill,
+              height: 170,
+              width: 120,
+            ),
+          ),
+          const SizedBox(
+            width: double.infinity,
+            height: 220,
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Faculty of Pharmacy',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 130,
+                      child: Divider(),
+                    ),
+                    Text('Dr.Ahmed Hagag'),
+                    SizedBox(
+                      width: 100,
+                      child: Divider(),
+                    ),
+                    Text(
+                      'The Faculty of Pharmacy complements the Egyptian pharmaceutical sector and society with capable and skilled graduates who are dedicated to the improvement of pharmaceutical services and facilities. ',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Card(
+            margin: const EdgeInsets.only(left: 20, right: 20),
+            child: Image.network(
+              'https://www.hu.edu.eg/wp-content/uploads/2019/08/physical-therapy.jpg',
+              fit: BoxFit.fill,
+              height: 170,
+              width: 120,
+            ),
+          ),
+          const SizedBox(
+            width: double.infinity,
+            height: 220,
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, top: 20, right: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Faculty of Physical Therapy',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 130,
+                      child: Divider(),
+                    ),
+                    Text('Dr.Malek'),
+                    SizedBox(
+                      width: 100,
+                      child: Divider(),
+                    ),
+                    Text(
+                      'Faculty of Physical Therapy pioneers a state-of-the art approach towards teaching and researching the field of Physiotherapy that heals and integrates the mind, body, and energy of the patients .',
+                    ),
                   ],
                 ),
               ),
