@@ -27,7 +27,10 @@ class _chatbotState extends State<chatbot> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Heliopolis University'),
+        title: const Text(
+          'Heliopolis University',
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
       ),
       drawer: Drawer(
@@ -286,6 +289,16 @@ class _chatbotState extends State<chatbot> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: const Color.fromARGB(255, 127, 80, 255),
+        onPressed: () {},
+        icon: const Icon(
+          Icons.chat_sharp,
+          color: Colors.white,
+        ),
+        label: const Text('ChatBot'),
+        tooltip: 'Connect To ChatBot',
       ),
     );
   }
