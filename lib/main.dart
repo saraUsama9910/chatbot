@@ -1,21 +1,41 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:chatbot/chatbot.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: chatbot(),
+    home: home(),
   ));
 }
 
-class chatbot extends StatefulWidget {
-  const chatbot({super.key});
+class home extends StatefulWidget {
+  const home({super.key});
+  void _launcherURL(int value) async {
+    String url = '';
+    if (value == 1) {
+      url = 'https://www.hu.edu.eg/';
+    }
+    // ignore: deprecated_member_use
+    if (await canLaunch(url)) {
+      // ignore: deprecated_member_use
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        enableJavaScript: true,
+      );
+    } else {
+      throw 'Could not Launch URL$url';
+    }
+  }
 
   @override
-  State<chatbot> createState() => _chatbotState();
+  State<home> createState() => _chatbotState();
 }
 
-class _chatbotState extends State<chatbot> {
+class _chatbotState extends State<home> {
   final List<String> imageList = [
     'https://www.hu.edu.eg/wp-content/uploads/2018/10/HU-113-1024x683.jpg',
     'https://www.hu.edu.eg/wp-content/uploads/2021/09/IMG_9653-min-1024x683.jpg',
@@ -49,9 +69,10 @@ class _chatbotState extends State<chatbot> {
                 ),
               ),
             ),
-            const ListTile(
-              title: Text('Heliopolis Site'),
-              trailing: Icon(Icons.blur_circular_outlined),
+            ListTile(
+              title: const Text('Heliopolis Site'),
+              trailing: const Icon(Icons.blur_circular_outlined),
+              onTap: () {},
             ),
             const Divider(),
             const ListTile(
@@ -292,7 +313,14 @@ class _chatbotState extends State<chatbot> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: const Color.fromARGB(255, 127, 80, 255),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ChatBot(),
+            ),
+          );
+        },
         icon: const Icon(
           Icons.chat_sharp,
           color: Colors.white,
