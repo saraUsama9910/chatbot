@@ -46,6 +46,41 @@ class _chatbotState extends State<chatbot> {
                 ),
               ),
             ),
+            const ListTile(
+              title: Text('Heliopolis Site'),
+              trailing: Icon(Icons.blur_circular_outlined),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Text('Help'),
+              trailing: Icon(Icons.help),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Text('Settings'),
+              trailing: Icon(Icons.settings_suggest_outlined),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Text('Heliopolis TimeTable'),
+              trailing: Icon(Icons.view_timeline_outlined),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Text('Privacy'),
+              trailing: Icon(Icons.privacy_tip_outlined),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Text('Contact Us'),
+              trailing: Icon(Icons.call),
+            ),
+            const Divider(),
+            const ListTile(
+              title: Text('Log Out'),
+              trailing: Icon(Icons.logout),
+            ),
+            const Divider(),
           ],
         ),
       ),
