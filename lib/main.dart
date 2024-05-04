@@ -30,6 +30,21 @@ class _chatbotState extends State<chatbot> {
         title: const Text('Heliopolis University'),
         centerTitle: true,
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: const Text('HU'),
+              accountEmail: const Text('sarausama80@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                child: Image.network(
+                  'https://avatars.githubusercontent.com/u/150288890?v=4',
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: ListView(
         padding: const EdgeInsets.only(top: 30),
         children: [
