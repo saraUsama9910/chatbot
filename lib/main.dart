@@ -36,9 +36,13 @@ class _chatbotState extends State<chatbot> {
             UserAccountsDrawerHeader(
               accountName: const Text('HU'),
               accountEmail: const Text('sarausama80@gmail.com'),
-              currentAccountPicture: CircleAvatar(
-                child: Image.network(
-                  'https://yt3.ggpht.com/3L6NH7UvuyBUWjPsAFC-7K5UIiN-0nBAB_ZqR3FM3gSGR7oj7cJKkdR2RPFbuKFeuQTtpLhS=s88-c-k-c0x00ffffff-no-rj',
+              currentAccountPicture: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                        'https://avatars.githubusercontent.com/u/150288890?v=4'),
+                  ),
                 ),
               ),
             ),
